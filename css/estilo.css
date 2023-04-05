@@ -1,0 +1,490 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    padding: 30px;
+    margin: 20px;
+}
+
+body { 
+    background-color: rgb(18, 18, 18);
+    color:  rgb(222, 222, 222);
+    /* background-color: #ECE9E1;  */
+}
+
+/* Barra de navegación */
+ul {
+    list-style-type: none;
+}
+/* general */
+a {
+    font-family: tahoma;
+    font-weight: bold;
+    font-style: italic;
+    color:  rgb(222, 222, 222);
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* LOGO */
+.divLogo h2{
+    border: ridge 3px black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navHeader{
+    background-color:#6E6C68;
+    height: auto;
+    width: auto;
+}
+
+/* tarjetas */
+.text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+.text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+.c-centro{
+    display: flex;
+    justify-content: center;
+}
+.card { 
+    width: 80%;
+    height: auto;
+    max-width: 300px;
+    padding: 3rem;
+    border: 8px solid rgb(53, 52, 52);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+/* boton */
+button {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+}
+   
+.botonContac {
+    text-align: center;
+}
+
+.h-haveProject {
+    padding: 50px;
+    font-size: 30px;
+    font-style: bold;
+}
+
+.contButon{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* footer */
+footer{
+    height: auto;
+    width: auto;
+    background-color: #6E6C68;}
+
+/* (home)contenido principal texto-nombre */
+.contPrincipal .contInform{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center; 
+}
+
+.contInform h2{
+    font-size: 18px;
+}
+
+.contInform p {
+    font-size: 18px;
+}
+
+
+/* img-principal-der */
+.divImgPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    
+
+}
+.divImgPrincipal img{
+    width: auto;
+    height: auto;
+} 
+
+/* clases para reutilizar */
+.m-20{margin: 20px;}
+.p-20{padding: 20px;}
+.p-50{padding: 50px;}
+.p-150{padding: 150px;}
+.p-80-top{padding-top: 80px;}
+.p-150-bottom{padding-bottom: 150px;}
+.p-top-50{padding-top: 50px;}
+.t-c{text-align: center;}
+.ob-centro{display:flex ; justify-content: center;}
+.fs-30{font-size: 30px;}
+
+/* img secion2 */
+.wh-img{
+    width: 80%;
+    height: auto;
+}
+
+.contButon{
+    display: flex;
+    justify-content: center;
+}
+
+.hDosWorkingEveryDay{
+    text-align: center;
+    font-style: bold;
+    font-size: 25px;
+}
+
+/* about pagina */
+.aboutImg img{
+    width: 100%;
+    height: auto;
+}
+
+/* port pagina */
+.img-colec img{
+    width: 100%;
+    height: auto;
+}
+
+/* productos cards */
+.cardProducto{
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    border: solid 5px black;
+    display: flex;
+    flex-direction: column;
+} 
+
+.cardProducto img{   
+    border-radius: 20px;
+    border: solid 2px black;
+    margin: 20px     
+}
+
+/* contacto */                              
+.formulario img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* contenido principal */
+@media (min-width: 1024px) {
+    /* GRID principal (header-main-footer) */
+    .gridHome{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        row-gap: 30px;
+    }
+
+    header{grid-area: header; }
+    main{grid-area: main;}
+    footer{grid-area: footer;} 
+    /* header, footer{ 
+        display: flex;
+        flex-direction: row;
+    } */
+
+
+    /* GRID main (section1 section2 section3) */
+    .gridSectionUno{
+        display: grid;
+        grid-template-areas: 
+        "contInform divImgPrincipal"
+        "hDosWorkingEveryDay hDosWorkingEveryDay"
+        "cardUno cardDos"
+        "cardTres cardCuatro";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 50px;
+    }
+
+    .contInform{grid-area: contInform;}
+    .divImgPrincipal{grid-area: divImgPrincipal;}
+    .hDosWorkingEveryDay{grid-area: hDosWorkingEveryDay;}
+    .cardUno{grid-area: cardUno;}
+    .cardDos{grid-area: cardDos;}
+    .cardTres{grid-area: cardTres;}
+    .cardCuatro{grid-area: cardCuatro;}
+
+    .gridSectionDos{
+        display: grid;
+        grid-template-areas: 
+        "img1 img2 img3 img4"
+        "img5 img6 img7 img8";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto;
+        row-gap: 50px;
+    }
+    .img1{grid-area: img1;}
+    .img2{grid-area: img2;}
+    .img3{grid-area: img3;}
+    .img4{grid-area: img4;}
+    .img5{grid-area: img5;}
+    .img6{grid-area: img6;}
+    .img7{grid-area: img7;}
+    .img8{grid-area: img8;}
+
+    .gridSectionTres{
+        display: grid;
+        grid-template-areas: 
+        "h-haveProject"
+        "contButon";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        row-gap: 50px;
+    }
+    .h-haveProject{grid-area: h-haveProject;}
+    .contButon{grid-area: contButon;}
+
+    /* ------------------------------------ */
+
+    .navHeader{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+    }
+    
+    
+    /* barra nav (home, about, ...) */
+    .navLeft {
+        display: flex;
+    }
+    
+    .navLeft li{
+        padding: 25px;
+    }
+    
+    /* ICONOS DE REDES */
+    .navRightIcon{
+        display: flex; 
+        
+    }
+    
+    .navRightIcon li{
+        padding: 25px;
+    } 
+    
+    footer{
+        text-align: center;
+    }
+    footer .footPrimero{
+        padding: 30px;
+        text-decoration: none;
+    }
+    
+    footer .footPrimero a{
+        padding: 30px;
+        margin: 10px;
+    }
+    
+    footer .footSegundo{
+        padding: 25px;
+        
+    }
+    .contInform h2{
+        text-align: start;
+    }
+
+    /* cards */
+    .c-end{display: flex; justify-content: end;}
+    .c-start{display: flex; justify-content: start;}
+    .p-left-20{padding-left: 20px;}
+    .p-right-20{padding-right: 20px;}
+    /* ABOUT */
+    /* grid (section-ABOUT) */
+    .gridSectionAbout{
+        display: grid;
+        grid-template-areas: 
+        "aboutSubtit aboutSubtit"
+        "iam iamInfo"
+        "missionInfo mission"
+        "principles principlesInfo";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 50px;
+    }
+
+    .aboutSubtit{grid-area: aboutSubtit;}
+    .iam{grid-area: iam;}
+    .iamInfo{grid-area: iamInfo;}
+    .missionInfo{grid-area: missionInfo;}
+    .mission{grid-area: mission;}
+    .principles{grid-area: principles;}
+    .principlesInfo{grid-area: principlesInfo;}
+    
+    /* grid section portafolio */
+    .gridSectionPort{
+        display: grid;
+        grid-template-areas:
+        "colecTitulo colecTitulo colecTitulo colecTitulo" 
+        "colec-1 colec-2 colec-3 colec-4"
+        "colec-5 colec-6 colec-7 colec-8"
+        "colec-9 colec-10 colec-11 colec-12";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .colecTitulo{grid-area: colecTitulo;}
+    .colec-1{grid-area: colec-1;}
+    .colec-2{grid-area: colec-2;}
+    .colec-3{grid-area: colec-3;}
+    .colec-4{grid-area: colec-4;}
+    .colec-5{grid-area: colec-5;}
+    .colec-6{grid-area: colec-6;}
+    .colec-7{grid-area: colec-7;}
+    .colec-8{grid-area: colec-8;}
+    .colec-9{grid-area: colec-9;}
+    .colec-10{grid-area: colec-10;}
+    .colec-11{grid-area: colec-11;}
+    .colec-12{grid-area: colec-12;}
+
+    /* grid cards productos */
+    .gridProductos{
+        display: grid;
+        grid-template-areas: 
+        "productTitulo productTitulo"
+        "cardProducto1 cardProducto2"
+        "cardProducto3 cardProducto4";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        gap: 50px;
+    }
+
+    .productTitulo{grid-area: productTitulo;}
+    .cardProducto1{grid-area: cardProducto1;}
+    .cardProducto2{grid-area: cardProducto2;}
+    .cardProducto3{grid-area: cardProducto3;}
+    .cardProducto4{grid-area: cardProducto4;}
+ 
+}
+
+
+
+/* Vista MOBILE */
+@media (max-width:768px){
+    .navHeader{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .navLeft{
+        display: flex;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    
+    .navLeft li{
+        padding: 3px;
+    }
+    .navLeft li a{
+        font-size: 11px;
+    }
+    .navRightIcon{
+        padding-left: 3px;
+    }
+    .desaparecer{
+        display: none;
+    }
+
+    .divImgPrincipal img{
+        width: auto;
+        height: auto;
+    }
+    
+
+    /* cards */
+    .c-centro-m{display: flex; 
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+    /* img section2*/
+    .p-left-30-img{
+        padding-bottom: 30px;
+    }
+    /* footer */
+    .contFooter{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .footPrimero {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .footSegundo{
+        text-align: center;
+    }
+    
+    /* imagenes */
+    .wh-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .cardProducto{
+        width: 100%;
+        height: auto;
+    }
+    .card { 
+        width: 100%;
+        height: auto;
+
+    }
+}
